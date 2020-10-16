@@ -2,8 +2,8 @@
 title: "Is old music really getting older?"
 author: "Sung In Cho (sc4393)"
 date: "9/18/2019"
-output: html_document
-editor_options: 
+output: html_notebook
+editor_options:
   chunk_output_type: console
 ---
 
@@ -11,7 +11,7 @@ editor_options:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-![https://app.emaze.com/@ACQLOZFI#1](/Users/davidcho/Documents/GitHub/fall2019-proj1--SungInCho/figs/old vs new.jpg){width=550px}
+![https://app.emaze.com/@ACQLOZFI#1](C:/Users/sungi/Documents/GitHub/ADS-Project1/figs/old vs new.jpg){width=550px}
 
 
 \newline
@@ -47,7 +47,7 @@ The sound of music has changed as society has changed over the years, thus the c
     
     
 ```{r load libraries, warning=FALSE, message=FALSE, echo=FALSE}
-library(tm)
+library(tm) 
 library(data.table)
 library(tidyverse)
 library(tidytext)
@@ -64,6 +64,7 @@ library(sentimentr)
 library(devtools)
 library(knitr)
 library(shiny)
+library(reshape2)
 ```
 
 ```{r load data, warning=FALSE, message=FALSE, echo=FALSE}
@@ -209,7 +210,7 @@ b.2000s.freq <- b.2000s.freq[1:300,]
 wc.b.2000 <-wordcloud2(data = b.2000s.freq, color="random-dark")
 ```
 
-![](/Users/davidcho/Documents/GitHub/fall2019-proj1--SungInCho/figs/wc.b2000.png)
+![](C:/Users/sungi/Documents/GitHub/ADS-Project1/figs/wc.b2000.png)
 \
 
 
@@ -240,7 +241,7 @@ wc.a2000<- wordcloud2(data = a.2000s.freq, color="random-light",
            backgroundColor = "black")
 ```
 
-![](/Users/davidcho/Documents/GitHub/fall2019-proj1--SungInCho/figs/wc.a2000.png)
+![](C:/Users/sungi/Documents/GitHub/ADS-Project1/figs/wc.a2000.png)
 \
 
 
@@ -302,7 +303,7 @@ heat.time<-d3heatmap(read.score2, scale="column", color="Greens",
           xaxis_font_size = 12,dendrogram = "none")
 ```
 
-![](/Users/davidcho/Documents/GitHub/fall2019-proj1--SungInCho/figs/heat.time.png)
+![](C:/Users/sungi/Documents/GitHub/ADS-Project1/figs/heat.time.png)
 \
 
 
@@ -333,7 +334,7 @@ head.genre<-d3heatmap(read.score, scale="column", color="Blues",
           xaxis_font_size = 12, dendrogram = "none")
 ```
 
-![](/Users/davidcho/Documents/GitHub/fall2019-proj1--SungInCho/figs/heat.genre.png)
+![](C:/Users/sungi/Documents/GitHub/ADS-Project1/figs/heat.genre.png)
 \
 
 
@@ -423,7 +424,7 @@ In the Sentimental Analysis of lyrics written after year 2000, "Hip-Hop" and "Me
 
 # 5. Summary
 
-![https://www.ebaumsworld.com/pictures/funny-memes-breaking-down-rappers-lyrics/84882174/](/Users/davidcho/Documents/GitHub/fall2019-proj1--SungInCho/figs/nomakesense.jpeg){width=250px}
+![https://www.ebaumsworld.com/pictures/funny-memes-breaking-down-rappers-lyrics/84882174/](C:/Users/sungi/Documents/GitHub/ADS-Project1/figs/nomakesense.jpeg){width=250px}
 
 
 \newline
